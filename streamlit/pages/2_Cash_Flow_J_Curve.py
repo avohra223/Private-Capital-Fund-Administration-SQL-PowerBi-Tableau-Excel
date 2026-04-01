@@ -6,7 +6,6 @@ import plotly.graph_objects as go
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from db.load_data import query_df, load_sheet
 
-st.set_page_config(page_title="Cash Flow & J-Curve", page_icon="📈", layout="wide")
 st.title("Cash Flow & J-Curve Analysis")
 st.markdown(
     "Fund-level cash flow analysis. **Capital calls and management fees are inflows (+)** to the fund; "

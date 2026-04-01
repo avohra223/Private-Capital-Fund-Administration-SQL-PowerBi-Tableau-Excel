@@ -2,22 +2,8 @@ import streamlit as st
 import sys
 import os
 
-sys.path.insert(0, os.path.dirname(__file__))
-from db.load_data import init_db, query_df
-
-# Initialize database on first run
-init_db()
-
-st.set_page_config(
-    page_title="Private Markets Fund Administration",
-    page_icon="📊",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
-
-st.sidebar.markdown("### Private Markets\n### Fund Administration")
-st.sidebar.markdown("---")
-st.sidebar.caption("Akhil Vohra | Data & Reporting Analyst")
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from db.load_data import query_df
 
 st.title("Private Markets Fund Administration Dashboard")
 st.markdown("---")

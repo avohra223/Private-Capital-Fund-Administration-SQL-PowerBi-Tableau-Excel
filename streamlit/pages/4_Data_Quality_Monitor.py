@@ -5,7 +5,6 @@ import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from db.load_data import query_df, load_sheet
 
-st.set_page_config(page_title="Data Quality Monitor", page_icon="🔍", layout="wide")
 st.title("Data Quality Monitor")
 st.markdown("Automated operational audit — continuous data integrity checks across the fund administration dataset.")
 st.markdown("---")

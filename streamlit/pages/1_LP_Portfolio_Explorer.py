@@ -7,7 +7,6 @@ import plotly.graph_objects as go
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from db.load_data import query_df, load_sheet
 
-st.set_page_config(page_title="LP Portfolio Explorer", page_icon="👤", layout="wide")
 st.title("LP Portfolio Explorer")
 st.markdown("Select an investor to view their full cross-fund position, transaction history, and key metrics.")
 st.markdown("---")

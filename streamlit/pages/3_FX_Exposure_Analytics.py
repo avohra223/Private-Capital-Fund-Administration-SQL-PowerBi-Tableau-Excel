@@ -7,7 +7,6 @@ import plotly.graph_objects as go
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from db.load_data import query_df, load_sheet
 
-st.set_page_config(page_title="FX Exposure Analytics", page_icon="💱", layout="wide")
 st.title("FX Exposure Analytics")
 st.markdown("Analyze currency exposure, FX rate trends, and the impact of exchange rate movements on fund transactions.")
 st.markdown("---")
