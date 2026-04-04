@@ -1,13 +1,14 @@
 # Private Markets Reporting & Governance Portfolio
 
-**Akhil Vohra** | Data & Reporting Analyst
+**[View Live Dashboard](https://fund-reporting-dashboard.streamlit.app/)**
+
+**Akhil Vohra** | Built by a finance professional with 7 years in PE fund management to demonstrate the intersection of fund operations domain expertise and data analytics.
 
 ---
 
 ## Overview
 
-This portfolio demonstrates end-to-end reporting and data governance skills applied to a private markets fund administration context, directly mirroring the operational environment at firms like BBH, where fund administrators are responsible for LP reporting, NAV validation, capital activity tracking, and data integrity across multi-currency, multi-fund structures.
-The work covers the full reporting lifecycle: raw data ingestion, structured querying, business analysis, governance dashboards, benchmark comparison, and client-facing LP reporting. All four core tools (SQL, Power BI, Tableau, and Excel) are represented with real business use cases.
+This portfolio demonstrates end-to-end reporting and data governance skills applied to a private markets fund administration context, directly mirroring the operational environment at global fund administrators and custodian banks, where teams are responsible for LP reporting, NAV validation, capital activity tracking, and data integrity across multi-currency, multi-fund structures. The work covers the full reporting lifecycle: raw data ingestion, structured querying, business analysis, governance dashboards, benchmark comparison, and client-facing LP reporting. All four core tools (SQL, Power BI, Tableau, and Excel) are represented with real business use cases.
 
 ---
 
@@ -32,21 +33,21 @@ The work covers the full reporting lifecycle: raw data ingestion, structured que
 
 | # | File | Business Question |
 |---|------|-------------------|
-| 01 | 01_fund_overview.sql | What funds are we administering and what is their size? |
-| 02 | 02_lp_commitments_ranked.sql | Which investors have the largest total commitments? |
-| 03 | 03_commitment_utilization.sql | What percentage of each LP commitment has been called? |
-| 04 | 04_capital_calls_by_fund.sql | How much capital has been drawn down per fund? |
-| 05 | 05_distributions_by_fund.sql | How much has been returned to investors per fund? |
-| 06 | 06_investor_type_breakdown.sql | What is our LP base composition by investor type? |
-| 07 | 07_net_cash_flow_by_fund.sql | What is the net cash position per fund? |
-| 08 | 08_transaction_activity_by_quarter.sql | How has transaction volume trended over time? |
-| 09 | 09_lp_statement.sql | What is each investor's complete financial position? |
-| 10 | 10_fx_exposure.sql | Which transactions involved currency conversion? |
-| 11 | 11_nav_progression.sql | How has each fund's NAV evolved quarter by quarter? |
-| 12 | 12_fund_dpi.sql | How much have investors gotten back relative to what they put in? |
-| 13 | 13_investor_concentration.sql | What percentage of total AUM does each LP represent? |
-| 14 | 14_unfunded_commitments.sql | How much capital is each LP still obligated to contribute? |
-| 15 | 15_quarterly_reporting_pack.sql | Complete fund health snapshot — NAV, DPI, RVPI |
+| 01 | `01_fund_overview.sql` | What funds are we administering and what is their size? |
+| 02 | `02_lp_commitments_ranked.sql` | Which investors have the largest total commitments? |
+| 03 | `03_commitment_utilization.sql` | What percentage of each LP commitment has been called? |
+| 04 | `04_capital_calls_by_fund.sql` | How much capital has been drawn down per fund? |
+| 05 | `05_distributions_by_fund.sql` | How much has been returned to investors per fund? |
+| 06 | `06_investor_type_breakdown.sql` | What is our LP base composition by investor type? |
+| 07 | `07_net_cash_flow_by_fund.sql` | What is the net cash position per fund? |
+| 08 | `08_transaction_activity_by_quarter.sql` | How has transaction volume trended over time? |
+| 09 | `09_lp_statement.sql` | What is each investor's complete financial position? |
+| 10 | `10_fx_exposure.sql` | Which transactions involved currency conversion? |
+| 11 | `11_nav_progression.sql` | How has each fund's NAV evolved quarter by quarter? |
+| 12 | `12_fund_dpi.sql` | How much have investors gotten back relative to what they put in? |
+| 13 | `13_investor_concentration.sql` | What percentage of total AUM does each LP represent? |
+| 14 | `14_unfunded_commitments.sql` | How much capital is each LP still obligated to contribute? |
+| 15 | `15_quarterly_reporting_pack.sql` | Complete fund health snapshot — NAV, DPI, RVPI |
 
 **Techniques used:** CTEs, window functions (LAG), CASE WHEN, CROSS JOIN, COALESCE, multi-table JOINs across 3+ tables
 
@@ -70,11 +71,11 @@ Three-page dashboard balancing performance analytics with governance and excepti
 
 Built from `private_markets_raw_data_March2026.xlsx` — 8 sheets covering 3 funds, 6 LPs, 107 transactions, 25 quarters of NAV, benchmarks, and performance metrics.
 
-**[Fund Performance & Benchmarking](https://public.tableau.com/app/profile/akhil.vohra/viz/FundAdministrationPortfolio-AkhilVohra/PerformanceDashboard)** — Quarterly excess returns vs benchmark (fund return minus benchmark), TVPI heat map by fund and year
+**Fund Performance & Benchmarking** — Quarterly excess returns vs benchmark (fund return minus benchmark), TVPI heat map by fund and year
 
-**[Capital Activity & LP Overview](https://public.tableau.com/app/profile/akhil.vohra/viz/FundAdministrationPortfolio-AkhilVohra/CapitalDashboard)** — NAV progression vs capital deployed (combo chart), capital calls/distributions/fees by fund, LP commitment breakdown
+**Capital Activity & LP Overview** — NAV progression vs capital deployed (combo chart), capital calls/distributions/fees by fund, LP commitment breakdown
 
-**Views built:**
+Views built:
 - Excess return bar chart (fund quarterly return minus relevant benchmark)
 - TVPI heat map (highlight table by fund and year)
 - NAV vs capital deployed (dual-axis combo: NAV lines + called capital bars, split by fund)
@@ -144,7 +145,8 @@ Full documentation covering data architecture, SQL techniques, Power BI design, 
 ---
 
 ## Repository Structure
-```text
+
+```
 sql/                        15 SQL queries (01-15)
 powerbi/
   private_markets_dashboard.pbix
